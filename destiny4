@@ -1,0 +1,136 @@
+/*
+       
+       * * * * * * * * * * * * * * * * *
+       *    Author  abhi280200         *
+       *    ABHISHEK TRIVEDI           *
+       *     INSTITUTE   MNNIT         *    
+       *                               *
+       * * * * * * * * * * * * * * * * *
+
+/////////////////////////////////////////////
+CODE START/////////////////
+
+*/
+
+
+
+
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+
+#include <iostream>
+#include <sstream>
+#include <cstdio>
+#include <cmath>
+#include <cstring>
+#include <cctype>
+#include <string>
+#include <vector>
+#include <list>
+#include <set>
+#include <map>
+#include <queue>
+#include <stack>
+#include <algorithm> 
+#include <functional>
+#include <unordered_map>
+#include <unordered_set>
+#include  <ctime>
+#include <iomanip>
+#include <bitset>
+#include <assert.h>   
+using namespace std;
+ 
+#define ll                  long long int
+#define uint                  unsigned long long int
+#define count_1(n)            __builtin_popcountint(n)
+#define pb                    push_back
+#define eb                    emplace_back
+#define ab(a)                 (a<0)?(-1*a):a
+#define pc                    putchar
+#define gc                    getchar
+#define mset(a,b,c)           loop(i,0,b) a[i]=c
+#define mp                    make_pair
+#define itoc(c)               ((char)(((int)'0')+c))
+#define aint(p)                p.begin(),p.end()
+#define max(x,y)              ((x>y)?x:y)
+#define min(x,y)              ((x<y)?x:y)
+#define mid(s,e)              (s+(e-s)/2)
+#define vi                    vector<int>
+#define vvi                   vector<vector<int>>
+const int MOD = 1e9 + 7;
+
+
+
+
+  bool isPowerOfTwo(long long int n)
+{
+   if(n==0)
+   return false;
+ 
+   return (ceil(log2(n)) == floor(log2(n)));
+}
+long long int power(long long int k,long long int p)
+  {
+      long long int res=1;
+      k=k%1000000007;
+      for(;p;p>>=1)
+      {
+          if(p&1)
+          res=res*k%1000000007;
+          k=k*k%1000000007;
+      }
+      return res;
+  }
+  long long int lcm(long int a,long int b)
+  {
+       long int p;
+       p=__gcd(a,b);
+       return a*b/p;
+       
+  }
+  
+                                  //sanitize
+  int main()
+{
+   ll t,i,j,k,l,n,m,p;
+  string s;
+    getline(cin,s);
+  l=0; 
+  n=s.size();
+  for(i=0;i<n-7;i++)
+  {
+      if((s[i]=='s'||s[i]=='S')&&(s[i+1]=='A'||s[i+1]=='a')&&(s[i+2]=='n'||s[i+2]=='N')&&(s[i+3]=='i'||s[i+3]=='I')&&(s[i+4]=='T'||s[i+4]=='t')&&
+      (s[i+5]=='i'||s[i+5]=='I')&&(s[i+6]=='z'||s[i+6]=='Z')&&(s[i+7]=='E'||s[i+7]=='e'))
+      {
+          l=1;
+          cout<<"Safe"<<endl;
+          break;
+      }
+  }
+  if(l==0)
+  cout<<"Not safe"<<endl;
+  
+   return 0;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
